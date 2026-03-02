@@ -2,4 +2,5 @@
 @prefix data:<https://vucis.github.io/data.ttl#>.
 
 data:me a vocab:Person;
-  vocab:knows <https://arnedierick.github.io/data.ttl/#me>.
+  vocab:knows <https://arnedierick.github.io/data.ttl/#me>,
+    <https://miboelae.github.io/data.ttl#me>.
