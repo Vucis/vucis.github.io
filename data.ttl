@@ -15,5 +15,5 @@
   rdfs:domain <#Person>;
   rdfs:range <#Person>.
 
-<https://example.org/Siebe> a <#Person>;
+<https://vucis.github.io/data.ttl/#me> a <#Person>;
   <#knows> <https://arnedierick.github.io/data.ttl/#me>.
