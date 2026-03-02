@@ -1,0 +1,18 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#Person> a rdfs:Class ;
+  rdfs:label "person"@en ,
+    "persoon"@nl ;
+  rdfs:comment "A human being regarded as an individual."@en ,
+    "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl.
+
+<#knows> a rdfs:Property;
+  rdfs:label "knows"@en,
+    "kent"@nl;
+  rdfs:comment "To have a familiarity with someone; to know who someone is. Such familiarity can range from close friendship to having only met someone once."@en,
+    "Bekend zijn met een persoon, vaak omdat je diegene hebt ontmoet of persoonlijk contact hebt gehad."@nl;
+  rdfs:domain <#Person>;
+  rdfs:range <#Person>.
+
+<https://example.org/Siebe> a <#Person>;
+  <#knows> <https://arnedierick.github.io/data.ttl/#me>.
