@@ -1,0 +1,17 @@
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix vocab:<https://vucis.github.io/vocab.ttl#>.
+
+vocab:Person a rdfs:Class;
+  rdfs:label "person"@en,
+    "persoon"@nl;
+  rdfs:comment "A human being regarded as an individual."@en,
+    "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl.
+
+vocab:knows a rdf:Property;
+  rdfs:label "knows"@en,
+    "kent"@nl;
+  rdfs:comment "To have a familiarity with someone; to know who someone is. Such familiarity can range from close friendship to having only met someone once."@en,
+    "Bekend zijn met een persoon, vaak omdat je diegene hebt ontmoet of persoonlijk contact hebt gehad."@nl;
+  rdfs:domain <#Person>;
+  rdfs:range <#Person>.
