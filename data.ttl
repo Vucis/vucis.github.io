@@ -1,12 +1,13 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
 
-<#Person> a rdfs:Class ;
-  rdfs:label "person"@en ,
-    "persoon"@nl ;
-  rdfs:comment "A human being regarded as an individual."@en ,
+<#Person> a rdfs:Class;
+  rdfs:label "person"@en,
+    "persoon"@nl;
+  rdfs:comment "A human being regarded as an individual."@en,
     "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl.
 
-<#knows> a rdfs:Property;
+<#knows> a rdf:Property;
   rdfs:label "knows"@en,
     "kent"@nl;
   rdfs:comment "To have a familiarity with someone; to know who someone is. Such familiarity can range from close friendship to having only met someone once."@en,
