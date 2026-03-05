@@ -25,9 +25,9 @@ vocab:knows a rdf:Property;
   rdfs:range vocab:Person.
 
 vocab:gender a rdf:Property;
-  rfds:label "gender"@en,
+  rdfs:label "gender"@en,
     "gender"@nl;
-  rfds:comment "The male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female."@en,
+  rdfs:comment "The male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female."@en,
     "De kenmerken, eigenschappen, talenten en verwachtingen die we toekennen aan vrouwen en mannen. Je wordt geboren met een (on)bepaald geslacht, maar gender krijg je mee vanuit de samenleving waarin je geboren bent."@nl;
   rdfs:domain vocab:Person;
   rdfs:range rdfs:Literal.
