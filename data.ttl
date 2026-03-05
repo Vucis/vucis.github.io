@@ -7,5 +7,6 @@ data:me a vocab:Person;
     <https://miboelae.github.io/data.ttl#me>,
     <https://cornelka.github.io/sol_kc/data.ttl#karelcornelis>;
   vocab:gender "male";
-  vocab:studentOf <https://pietercolpaert.be/#me>.
-    
+  vocab:studentOf <https://pietercolpaert.be/#me>;
+  vocab:likes "reading".
+

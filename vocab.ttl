@@ -23,7 +23,7 @@ vocab:knows a rdf:Property;
     "Bekend zijn met een persoon, vaak omdat je diegene hebt ontmoet of persoonlijk contact hebt gehad."@nl;
   rdfs:domain vocab:Person;
   rdfs:range vocab:Person.
-  
+
 vocab:gender a rdf:Property;
   rfds:label "gender"@en,
     "gender"@nl;
@@ -39,3 +39,12 @@ vocab:studentOf a rdf:Property;
     "Opleiding gekregen van."@nl;
   rdfs:domain vocab:Person;
   rdfs:range vocab:Person.
+
+vocab:likes a rdf:Property;
+  rdfs:label "likes"@en,
+    "leuk vinden"@nl;
+  rdfs:comment "To enjoy or approve of something or someone."@en,
+    "Waardering, plezier of genegenheid voor iets of iemand hebben."@nl;
+  rdfs:domain vocab:Person;
+  rdfs:range rdfs:Literal.
+
