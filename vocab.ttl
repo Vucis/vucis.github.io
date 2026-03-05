@@ -13,5 +13,14 @@ vocab:knows a rdf:Property;
     "kent"@nl;
   rdfs:comment "To have a familiarity with someone; to know who someone is. Such familiarity can range from close friendship to having only met someone once."@en,
     "Bekend zijn met een persoon, vaak omdat je diegene hebt ontmoet of persoonlijk contact hebt gehad."@nl;
-  rdfs:domain <#Person>;
-  rdfs:range <#Person>.
+  rdfs:domain vocab:Person;
+  rdfs:range vocab:Person.
+  
+vocab:gender a rdf:Property;
+  rfds:label "gender"@en,
+    "gender"@nl;
+  rdfs:comment "The male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female."@en,
+    "De kenmerken, eigenschappen, talenten en verwachtingen die we toekennen aan vrouwen en mannen. Je wordt geboren met een (on)bepaald geslacht, maar gender krijg je mee vanuit de samenleving waarin je geboren bent."@nl;
+  rdfs:domain vocab:Person;
+  rdfs:range rdfs:Literal.
+
