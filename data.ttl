@@ -2,6 +2,7 @@
 @prefix data:<https://vucis.github.io/data.ttl#>.
 
 data:me a vocab:Person;
+  vocab:name "Siebe Vlietinck";
   vocab:knows <https://arnedierick.github.io/data.ttl#me>,
     <https://miboelae.github.io/data.ttl#me>,
     <https://cornelka.github.io/sol_kc/data.ttl#karelcornelis>;

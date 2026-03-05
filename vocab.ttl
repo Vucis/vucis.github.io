@@ -8,6 +8,14 @@ vocab:Person a rdfs:Class;
   rdfs:comment "A human being regarded as an individual."@en,
     "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl.
 
+vocab:name a rdf:Property;
+  rdfs:label "name"@en,
+    "naam"@nl;
+  rdfs:comment "A word or set of words by which a person or thing is known, addressed, or referred to."@en,
+    "Woord waarmee je zegt hoe iets of iemand heet."@nl;
+  rdfs:domain vocab:Person;
+  rdfs:range rdfs:Literal.
+
 vocab:knows a rdf:Property;
   rdfs:label "knows"@en,
     "kent"@nl;
