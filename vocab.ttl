@@ -24,3 +24,10 @@ vocab:gender a rdf:Property;
   rdfs:domain vocab:Person;
   rdfs:range rdfs:Literal.
 
+vocab:studentOf a rdf:Property;
+  rdfs:label "student of"@en,
+    "student van"@nl;
+  rdfs:comment "Person who has taught this person."@en,
+    "Opleiding gekregen van."@nl;
+  rdfs:domain vocab:Person;
+  rdfs:range vocab:Person.
