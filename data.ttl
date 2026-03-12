@@ -11,6 +11,5 @@ data:me a vocab:Person;
   vocab:likes "reading";
   vocab:participantOf vocab:KnowledgeGraphs.
 
-vocab:KnowledgeGraphs
-  a vocab:Course ;
+data:KnowledgeGraphs a vocab:Course ;
   vocab:courseName "Knowledge Graphs"^^xsd:string .
