@@ -48,6 +48,11 @@ vocab:likes a rdf:Property;
   rdfs:domain vocab:Person;
   rdfs:range rdfs:Literal.
 
+vocab:Student a rdfs:Class ;
+  rdfs:subClassOf vocab:Person ;
+  rdfs:label "Student"@en ;
+  rdfs:comment "A person who is a student (e.g., at a university)."@en .
+
 vocab:Course a rdfs:Class ;
   rdfs:label "Course"@en ;
   rdfs:comment "An educational course offered by a university or institution."@en .
