@@ -1,5 +1,6 @@
 @prefix vocab:<https://vucis.github.io/vocab.ttl#>.
 @prefix data:<https://vucis.github.io/data.ttl#>.
+@prefix xsd:  http://www.w3.org/2001/XMLSchema .
 
 data:me a vocab:Person;
   vocab:name "Siebe Vlietinck";
