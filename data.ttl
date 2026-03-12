@@ -8,5 +8,9 @@ data:me a vocab:Person;
     <https://cornelka.github.io/sol_kc/data.ttl#karelcornelis>;
   vocab:gender "male";
   vocab:studentOf <https://pietercolpaert.be/#me>;
-  vocab:likes "reading".
+  vocab:likes "reading";
+  vocab:participantOf vocab:KnowledgeGraphs.
 
+vocab:KnowledgeGraphs
+  a vocab:Course ;
+  vocab:courseName "Knowledge Graphs"^^xsd:string .

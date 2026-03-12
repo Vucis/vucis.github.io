@@ -48,3 +48,23 @@ vocab:likes a rdf:Property;
   rdfs:domain vocab:Person;
   rdfs:range rdfs:Literal.
 
+vocab:Course a rdfs:Class ;
+  rdfs:label "Course"@en ;
+  rdfs:comment "An educational course offered by a university or institution."@en .
+
+vocab:CourseParticipant a rdfs:Class ;
+  rdfs:subClassOf vocab:Student ;
+  rdfs:label "Course participant"@en ;
+  rdfs:comment "A student participating in a specific course."@en .
+
+vocab:participantOf a rdf:Property ;
+  rdfs:label "participant of"@en ;
+  rdfs:comment "Relates a student to a course they participate in."@en ;
+  rdfs:domain vocab:CourseParticipant ;
+  rdfs:range vocab:Course .
+
+vocab:courseName a rdf:Property ;
+  rdfs:label "course name"@en ;
+  rdfs:comment "The name of a course."@en ;
+  rdfs:domain vocab:Course ;
+  rdfs:range xsd:string .

@@ -28,7 +28,7 @@ CORS: The access-control-allow-origin: * header allows any external web applicat
 
 HTTPS: The HTTP/2 protocol and strict-transport-security (HSTS) header ensure the data is delivered over a secure, encrypted connection.
 
-Caching: GitHub Pages uses a CDN with cache-control: max-age=600 (10-minute cache) and an etag to allow clients to efficiently check for updates.
+Caching: GitHub Pages uses a CDN (Varnish) with cache-control: max-age=600 (10-minute cache) and an etag to allow clients to efficiently check for updates.
 
 Compression: The vary: Accept-Encoding header indicates the server supports compression. It isn't applied in this specific response, likely because the file is very small (428 bytes) or my curl command didn't explicitly request it.
 
