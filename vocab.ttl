@@ -2,12 +2,15 @@
 @prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
 @prefix vocab:<https://vucis.github.io/vocab.ttl#>.
 @prefix xsd:<http://www.w3.org/2001/XMLSchema>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
 
 vocab:Person a rdfs:Class;
   rdfs:label "person"@en,
     "persoon"@nl;
   rdfs:comment "A human being regarded as an individual."@en,
-    "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl.
+    "Een individueel menselijk wezen, vaak gezien als een drager van rechten en plichten."@nl;
+  rdfs:subClassOf foaf:Person.
 
 vocab:name a rdf:Property;
   rdfs:label "name"@en,
@@ -15,7 +18,8 @@ vocab:name a rdf:Property;
   rdfs:comment "A word or set of words by which a person or thing is known, addressed, or referred to."@en,
     "Woord waarmee je zegt hoe iets of iemand heet."@nl;
   rdfs:domain vocab:Person;
-  rdfs:range rdfs:Literal.
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:givenName.
 
 vocab:knows a rdf:Property;
   rdfs:label "knows"@en,
@@ -23,7 +27,8 @@ vocab:knows a rdf:Property;
   rdfs:comment "To have a familiarity with someone; to know who someone is. Such familiarity can range from close friendship to having only met someone once."@en,
     "Bekend zijn met een persoon, vaak omdat je diegene hebt ontmoet of persoonlijk contact hebt gehad."@nl;
   rdfs:domain vocab:Person;
-  rdfs:range vocab:Person.
+  rdfs:range vocab:Person;
+  rdfs:subPropertyOf foaf:knows.
 
 vocab:gender a rdf:Property;
   rdfs:label "gender"@en,
@@ -31,7 +36,8 @@ vocab:gender a rdf:Property;
   rdfs:comment "The male sex or the female sex, especially when considered with reference to social and cultural differences rather than biological ones, or one of a range of other identities that do not correspond to established ideas of male and female."@en,
     "De kenmerken, eigenschappen, talenten en verwachtingen die we toekennen aan vrouwen en mannen. Je wordt geboren met een (on)bepaald geslacht, maar gender krijg je mee vanuit de samenleving waarin je geboren bent."@nl;
   rdfs:domain vocab:Person;
-  rdfs:range rdfs:Literal.
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:gender.
 
 vocab:studentOf a rdf:Property;
   rdfs:label "student of"@en,
@@ -47,12 +53,13 @@ vocab:likes a rdf:Property;
   rdfs:comment "To enjoy or approve of something or someone."@en,
     "Waardering, plezier of genegenheid voor iets of iemand hebben."@nl;
   rdfs:domain vocab:Person;
-  rdfs:range rdfs:Literal.
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:topic_interest.
 
 vocab:Student a rdfs:Class ;
   rdfs:subClassOf vocab:Person ;
   rdfs:label "Student"@en ;
-  rdfs:comment "A person who is a student (e.g., at a university)."@en .
+  rdfs:comment "A person who is a student (e.g., at a university)."@en.
 
 vocab:Course a rdfs:Class ;
   rdfs:label "Course"@en ;
@@ -74,3 +81,44 @@ vocab:courseName a rdf:Property ;
   rdfs:comment "The name of a course."@en ;
   rdfs:domain vocab:Course ;
   rdfs:range xsd:string .
+  
+vocab:Image a rdfs:Class;
+  rdfs:label "image"@en;
+  rdfs:comment "A visible impression obtained by a camera, telescope, microscope, or other device, or displayed on a computer or video screen."@en;
+  rdfs:subClassOf foaf:Image.
+
+vocab:title a rdf:Property;
+  rdfs:label "title"@en;
+  rdfs:comment "The name of a book, composition, or other artistic work."@en;
+  rdfs:domain vocab:Image;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:name.
+
+vocab:author a rdf:Property;
+  rdfs:label "author"@en;
+  rdfs:comment "The creator of a book, composition, or other artistic work."@en;
+  rdfs:domain vocab:Image;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:maker.
+
+vocab:depicts a rdf:Property;
+  rdfs:label "depicts"@en;
+  rdfs:comment "Represent by a drawing, painting, or other art form."@en;
+  rdfs:domain vocab:Image;
+  rdfs:range vocab:Person;
+  rdfs:subPropertyOf foaf:depicts.
+
+vocab:location a rdf:Property;
+  rdfs:label "location"@en;
+  rdfs:comment "A particular place or position where an image was taken."@en;
+  rdfs:domain vocab:Image;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf foaf:based_near.
+  
+vocab:description a rdf:Property;
+  rdfs:label "description"@en;
+  rdfs:comment "A statement or account giving the characteristics of someone or something : a descriptive statement or account"@en;
+  rdfs:domain vocab:Image;
+  rdfs:range rdfs:Literal;
+  rdfs:subPropertyOf dc:description.
+

@@ -14,3 +14,12 @@ data:me a vocab:Person;
 
 data:KnowledgeGraphs a vocab:Course ;
   vocab:courseName "Knowledge Graphs"^^xsd:string .
+  
+<https://vtk.ugent.be/media/thumbs/photologue/photos/jobfair-2026-cv-fotos_61_r6m33292.jpg.1920x1005_q85_crop-scale.jpg> a vocab:Image;
+  vocab:title "Jobfair 2026 photo";
+  vocab:author "VTK Gent";
+  vocab:depicts data:me;
+  vocab:location "Flanders Expo Gent";
+  vocab:description "A photo of Siebe Vlietinck taken at the VTK Jobfair in 2026".
+
+
