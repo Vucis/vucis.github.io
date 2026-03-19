@@ -14,7 +14,7 @@ data:me a vocab:Person;
 
 data:KnowledgeGraphs a vocab:Course ;
   vocab:courseName "Knowledge Graphs"^^xsd:string .
-  
+
 <https://vtk.ugent.be/media/thumbs/photologue/photos/jobfair-2026-cv-fotos_61_r6m33292.jpg.1920x1005_q85_crop-scale.jpg> a vocab:Image;
   vocab:title "Jobfair 2026 photo";
   vocab:author "VTK Gent";
@@ -22,4 +22,23 @@ data:KnowledgeGraphs a vocab:Course ;
   vocab:location "Flanders Expo Gent";
   vocab:description "A photo of Siebe Vlietinck taken at the VTK Jobfair in 2026".
 
+data:pierrot a vocab:Person;
+  vocab:name "Jean-Charles Deburau".
+
+<https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Pierrot_Laughing_MET_DT1166.jpg/960px-Pierrot_Laughing_MET_DT1166.jpg> a vocab:Image;
+  vocab:title "The Mime Charles Deburau as Pierrot";
+  vocab:author "Nadar";
+  vocab:depicts data:pierrot;
+  vocab:location "Paris, France";
+  vocab:description "The Mime Charles Deburau as Pierrot, laughing".
+
+data:lincoln a vocab:Person;
+  vocab:name "Abraham Lincoln".
+
+<https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Abraham_Lincoln_1860.jpg/960px-Abraham_Lincoln_1860.jpg> a vocab:Image;
+  vocab:title "Abraham Lincoln";
+  vocab:author "Matthew Brady";
+  vocab:depicts data:lincoln;
+  vocab:location "New York City, United States";
+  vocab:description "A photo of Abraham Lincoln taken shortly before his Cooper Institute speech.".
 
